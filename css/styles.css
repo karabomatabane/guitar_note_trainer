@@ -1,0 +1,188 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #212327;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #181C14;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #ECDFCC;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.note-selector {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.note-selector button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #517049;
+    color: #ECDFCC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.note-selector button:hover {
+    background-color: #7f9178;
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ECDFCC;
+}
+
+.current-task {
+    font-size: 24px;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #3C3D37;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.note-display span {
+    font-weight: bold;
+    color: #ECDFCC;
+}
+
+.note-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.note-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #517049;
+    color: #ECDFCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 72px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgb(68, 93, 62, 100);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgb(68, 93, 62, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0rgb(68, 93, 62, 0);
+    }
+}
+
+.current-task {
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.note-display {
+    color: #697565;
+}
+
+.note-display span {
+    font-weight: bold;
+    color: #ECDFCC;
+}
+
+.progress {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #3C3D37;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #ECDFCC;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.progress-text {
+    font-size: 16px;
+    color: #697565;
+}
+
+.instructions {
+    font-style: italic;
+    color: #697565;
+    margin-top: 30px;
+}
+
+#results-screen {
+    gap: 30px;
+}
+
+.result {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #ECDFCC;
+}
+
+#restart-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #517049;
+    color: #ECDFCC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-btn:hover {
+    background-color: #7f9178;
+}

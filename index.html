@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Note Trainer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Guitar Note Trainer</h1>
+
+    <div id="setup-screen" class="screen">
+        <h2>Select a Note</h2>
+        <div class="note-selector">
+            <button data-note="C">C</button>
+            <button data-note="C#">C#/Db</button>
+            <button data-note="D">D</button>
+            <button data-note="D#">D#/Eb</button>
+            <button data-note="E">E</button>
+            <button data-note="F">F</button>
+            <button data-note="F#">F#/Gb</button>
+            <button data-note="G">G</button>
+            <button data-note="G#">G#/Ab</button>
+            <button data-note="A">A</button>
+            <button data-note="A#">A#/Bb</button>
+            <button data-note="B">B</button>
+        </div>
+    </div>
+
+    <div id="training-screen" class="screen hidden">
+        <div class="timer">Time: <span id="time-display">00:00</span></div>
+        <div class="current-task">
+            <div class="note-display">Play <span id="target-note"></span> on string</div>
+        </div>
+        <div class="note-container">
+            <div class="note-circle" id="note-circle">
+                <span id="target-string"></span>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-text">Round <span id="current-round">1</span>/2: <span id="completed-count">0</span>/6</div>
+        </div>
+        <div class="instructions">Press SPACE when ready for the next note</div>
+    </div>
+
+    <div id="results-screen" class="screen hidden">
+        <h2>Training Complete!</h2>
+        <div class="result">Total time: <span id="total-time"></span></div>
+        <button id="restart-btn">Start Again</button>
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
